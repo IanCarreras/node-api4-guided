@@ -6,8 +6,8 @@ const express = require("express")
 // console.log(process.env)
 
 const app = express()
-const host = "0.0.0.0"
-const port = 8080
+const host = process.env.HOST || '0.0.0.0'
+const port = process.env.PORT || 8080 //443 https, 80 http
 
 app.use((req, res, next) => {
 	console.log(`[${new Date().toLocaleString()}] ${req.ip} ${req.method} ${req.url}`)
