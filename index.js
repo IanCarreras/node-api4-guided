@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to our API",
-		cohort: process.env.cohort,
+		COHORT: process.env.COHORT,
 		secret: process.env.secret
 	})
 })
